@@ -10,6 +10,7 @@ Andreas Hontzia (@honze_net)
   <xsl:template match="/">
     <html lang="es">
       <head>
+     
         <meta name="referrer" content="no-referrer"/> 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
@@ -18,6 +19,8 @@ Andreas Hontzia (@honze_net)
         <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js" integrity="sha384-rgWRqC0OFPisxlUvl332tiM/qmaNxnlY46eksSZD84t+s2vZlqGeHrncwIRX7CGp" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js" integrity="sha384-7PXRkl4YJnEpP8uU4ev9652TTZSxrqC8uOpcV1ftVEC7LVyLZqqDUAaq+Y+lGgr9" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+        
         <style>
           .target:before {
             content: "";
@@ -35,7 +38,7 @@ Andreas Hontzia (@honze_net)
             padding-top:60px;
             width: 100%;
             height: 180px;
-            background-color: #116dff ;
+            background-color: #8dd696 ;
           }
           .clickable {
             cursor: pointer;
@@ -49,7 +52,9 @@ Andreas Hontzia (@honze_net)
             content: "\e080"; /* glyphicon-chevron-right */
           }
         </style>
-        <title>Reporte de Escaneo Nmap Vector Pro <xsl:value-of select="/nmaprun/@version"/></title>
+         <link rel="icon" href="https://static.wixstatic.com/media/bf1c7e_8dd911f92dc84870906a9c746245433d%7Emv2.jpg/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/bf1c7e_8dd911f92dc84870906a9c746245433d%7Emv2.jpg" type="image/jpeg"/>
+        <title>Vector Pro | Nmap <xsl:value-of select="/nmaprun/@version"/></title>
+        
       </head>
       <body>
         <nav class="navbar navbar-default navbar-fixed-top">
@@ -73,14 +78,17 @@ Andreas Hontzia (@honze_net)
           </div>
         </nav>
         <div class="container">
+       
           <div class="jumbotron">
-            <h1>Reporte de Scaneo by Vector Pro<br/><small>Nmap <xsl:value-of select="/nmaprun/@version"/></small></h1>
-            <pre style="white-space:pre-wrap; word-wrap:break-word;"><xsl:value-of select="/nmaprun/@args"/></pre>
+            <h1>Reporte de Scaneo <img src="https://static.wixstatic.com/media/bf1c7e_f38192cd9fc44f57ab399d9fc7049462~mv2.png/v1/fill/w_243,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Logo%20vPRO%20SF.png" /> <br/><small>Nmap <xsl:value-of select="/nmaprun/@version"/></small></h1>
+             
+            
             <p class="lead">
               <xsl:value-of select="/nmaprun/@startstr"/> – <xsl:value-of select="/nmaprun/runstats/finished/@timestr"/><br/>
               <xsl:value-of select="/nmaprun/runstats/hosts/@total"/> Dispositivos Scaneados.
               <xsl:value-of select="/nmaprun/runstats/hosts/@up"/> Dispositivos en linea.
               <xsl:value-of select="/nmaprun/runstats/hosts/@down"/> Dispositivos sin conexión.
+             
             </p>
             <div class="progress">
               <div class="progress-bar progress-bar-success" style="width: 0%">
@@ -311,8 +319,7 @@ Andreas Hontzia (@honze_net)
         <footer class="footer">
           <div class="container">
             <p class="text-muted">
-              Este reporte fue generado con la herramienta Nmap por Vector Pro hecho por Marco Portillo 2°
-              
+              <center>©2023 VectorPro. Todos los derechos reservados.</center>
            
             </p>
           </div>
