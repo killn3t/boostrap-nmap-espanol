@@ -1,0 +1,2 @@
+nmap 10.2.1.153 --stylesheet vectorpronmap.xsl -oX analisis
+xsltproc -o analisis.html analisis
